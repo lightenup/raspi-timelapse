@@ -3,6 +3,9 @@
 
 /.idea
 *.iml
+*.ipr
+*.iws
+/.gradle
 /out
 
 .DS_Store
