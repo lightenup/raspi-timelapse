@@ -1,3 +1,6 @@
+package com.zanazol.raspi.timelapse
+
+
 /**
  * Created by andreas on 16/03/14.
  */
