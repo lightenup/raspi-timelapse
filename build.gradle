@@ -1,9 +1,11 @@
 apply plugin: 'java'
 apply plugin: 'scala'
 apply plugin: 'idea'
+apply plugin:'application'
 
 sourceCompatibility = 1.7
 version = '1.0'
+mainClassName = "com.zanazol.raspi.timelapse.TimeLapseBoot"
 
 
 repositories {
