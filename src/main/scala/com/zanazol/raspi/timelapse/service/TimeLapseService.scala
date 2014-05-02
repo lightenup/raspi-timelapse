@@ -9,7 +9,7 @@ import scala.util.{Failure, Success}
  * Created by andreas on 16/03/14.
  */
 class TimeLapseService(implicit val bindingModule: BindingModule) extends Injectable {
-  val camera = injectOptional[Camera] getOrElse (new RaspberryPiCamera)
+  val camera = new RaspberryPiCamera()
 
   def takeAndUploadPicture() {
 
@@ -18,7 +18,7 @@ class TimeLapseService(implicit val bindingModule: BindingModule) extends Inject
        case Failure (ex) => println(s"Oooops...$ex")
      }
 
-    
+
     //upload picture to server
     //remove local copy of picture
   }
