@@ -1,11 +1,10 @@
-/build
-
-
 /.idea
 *.iml
 *.ipr
 *.iws
 /.gradle
 /out
+/target
+/build
 
 .DS_Store

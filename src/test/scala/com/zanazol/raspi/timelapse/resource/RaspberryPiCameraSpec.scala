@@ -35,9 +35,9 @@ class RaspberryPiCameraSpec extends Specification with PrivateMethodTester {
       val sdf = new SimpleDateFormat(camera.dateFormat)
       val resultDate = new Date(currentTime)
 
-      val expedtedDate = sdf.format(resultDate)
+      val expectedDate = sdf.format(resultDate)
 
-      expedtedDate.equals(timePart) must beTrue
+      expectedDate.equals(timePart) must beTrue
     }
   }
 

@@ -9,6 +9,7 @@ import com.zanazol.raspi.timelapse.resource.{UnixCommandLineExecutor, CommandLin
 object ComponentConfigurationModule extends NewBindingModule(module => {
   import module._
 
-  bind[CommandLineExecutor] toSingle {new UnixCommandLineExecutor}
+  bind[CommandLineExecutor] toSingle new UnixCommandLineExecutor
+  //bind[Camera] toSingle new RaspberryPiCamera
 
 })
