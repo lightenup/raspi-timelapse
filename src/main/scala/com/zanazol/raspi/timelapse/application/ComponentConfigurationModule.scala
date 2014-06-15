@@ -1,7 +1,7 @@
-package com.zanazol.raspi.timelapse
+package com.zanazol.raspi.timelapse.application
 
 import com.escalatesoft.subcut.inject.NewBindingModule
-import com.zanazol.raspi.timelapse.resource.{UnixCommandLineExecutor, CommandLineExecutor, Camera, RaspberryPiCamera}
+import com.zanazol.raspi.timelapse.resource._
 
 /**
  * Created by andreas on 23/03/14.
@@ -11,5 +11,6 @@ object ComponentConfigurationModule extends NewBindingModule(module => {
 
   bind[CommandLineExecutor] toSingle new UnixCommandLineExecutor
   //bind[Camera] toSingle new RaspberryPiCamera
+  //bind[UploadConnector] toSingle new FtpConnector
 
 })

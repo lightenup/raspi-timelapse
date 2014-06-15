@@ -1,10 +1,11 @@
 package com.zanazol.raspi.timelapse.resource
 
-import org.specs2.mutable.Specification
-import org.scalatest.PrivateMethodTester
-import com.zanazol.raspi.timelapse.ComponentConfigurationModule
-import java.util.{Calendar, Date}
 import java.text.SimpleDateFormat
+import java.util.Date
+
+import com.zanazol.raspi.timelapse.application.ComponentConfigurationModule
+import org.scalatest.PrivateMethodTester
+import org.specs2.mutable.Specification
 
 
 /**

@@ -2,8 +2,10 @@ package com.zanazol.raspi.timelapse.resource
 
 import java.text.SimpleDateFormat
 import java.util.Date
+
+import com.escalatesoft.subcut.inject.{BindingModule, Injectable}
+
 import scala.util.Try
-import com.escalatesoft.subcut.inject.{Injectable, BindingModule}
 
 /**
  * Created by andreas on 16/03/14.

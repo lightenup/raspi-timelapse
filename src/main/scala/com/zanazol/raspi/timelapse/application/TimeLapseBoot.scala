@@ -1,4 +1,4 @@
-package com.zanazol.raspi.timelapse
+package com.zanazol.raspi.timelapse.application
 
 import com.zanazol.raspi.timelapse.service.TimeLapseService
 
