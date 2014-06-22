@@ -10,7 +10,6 @@ object ComponentConfigurationModule extends NewBindingModule(module => {
   import module._
 
   bind[CommandLineExecutor] toSingle new UnixCommandLineExecutor
-  //bind[Camera] toSingle new RaspberryPiCamera
-  //bind[UploadConnector] toSingle new FtpConnector
+  bind[Camera] toProvider { implicit bindingModule => new RaspberryPiCamera()}
 
 })
