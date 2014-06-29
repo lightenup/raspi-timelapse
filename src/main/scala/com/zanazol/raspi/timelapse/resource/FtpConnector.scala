@@ -1,21 +1,21 @@
 package com.zanazol.raspi.timelapse.resource
 
 import java.io.{FileInputStream, InputStream}
-
-import com.zanazol.raspi.timelapse.application.ApplicationConfig
-import fr.janalyse.ssh.SSH
+import com.escalatesoft.subcut.inject.{BindingModule, Injectable}
+import com.zanazol.raspi.timelapse.application.ApplicationConfigHelper
+import fr.janalyse.ssh.{SSHFtp, SSHOptions, SSH}
 
 
 /**
  * Created by andreas on 15/06/14.
  */
-class FtpConnector extends UploadConnector with ApplicationConfig {
+class FtpConnector(implicit val bindingModule: BindingModule) extends UploadConnector with Injectable with ApplicationConfigHelper{
+  val ftp = injectOptional[SSHFtp] getOrElse {implicit val ssh = new SSH(SSHOptions(ftpHost, ftpUser, ftpPassword))
+  val sshFtp = new SSHFtp()
+  sshFtp}
 
   def uploadFile(relativeFilePath: String) = {
-    SSH.ftp(ftpHost, ftpUser, ftpPassword) { ftp =>
       val inputStream: InputStream = new FileInputStream(relativeFilePath)
       ftp.putFromStream(inputStream, relativeFilePath)
-    }
-
   }
 }

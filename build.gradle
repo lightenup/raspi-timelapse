@@ -25,6 +25,9 @@ dependencies {
 
     compile group: 'fr.janalyse', name: 'janalyse-ssh_2.10', version: '0.9.10'
 
+    compile group: 'com.github.scala-incubator.io', name: 'scala-io-core_2.10', version: '0.4.3'
+    compile group: 'com.github.scala-incubator.io', name: 'scala-io-file_2.10', version: '0.4.3'
+
     testCompile group: 'junit', name: 'junit', version: '4.11'
     testCompile group: 'org.specs2', name: 'specs2_2.10', version: '2.3.10'
     testCompile group: 'org.scalatest', name: 'scalatest_2.10', version: '2.1.5'
